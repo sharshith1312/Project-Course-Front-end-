@@ -29,6 +29,7 @@ body{
 
 .btn:hover{
     transform: scale(0.96);
+    
 }
 
 nav .navbar-brand{

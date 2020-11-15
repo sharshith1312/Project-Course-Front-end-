@@ -1,0 +1,401 @@
+body{
+    font-family: 'PT Serif', serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    background: #2d2254;
+    /* background:; */
+    color: #fff;
+
+}
+
+h1,h2,h3,p{
+    margin-bottom: 8px;
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+
+}
+
+.btn{
+    display: inline-block;
+    border: 0;
+    background: #f5c42f;
+    color: #fff;
+    border-radius: 20px;
+    padding: 8px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+
+}
+
+.btn:hover{
+    transform: scale(0.96);
+}
+
+.secondary-text{
+    color: #f5c42f;
+}
+
+nav{
+    width: 93%;
+    /* border: 1px solid white; */
+    margin: 20px auto 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li{
+    position: relative;
+    list-style: none;
+}
+nav ul{
+    display: flex;
+    /* justify-content: space-between; */
+}
+nav ul li {
+    margin-left:10px ;
+    margin-right: 10px;
+}
+nav ul li a{
+    font-weight: bold;
+    
+    
+}
+
+nav .logo{
+    font-weight: 900;
+    font-size: 24px;
+    
+    /* border-radius: 50% 50%; */
+}
+nav .logo a{
+    /* color: #f5c42f; */
+    /* color: aqua; */
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: aqua;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    top: 28px;
+    /* bottom: 0; */
+    left: 0;
+    transition: all 0.3s ease-in-out ;
+}
+nav ul li:hover a::after{
+    visibility:visible;
+    width: 100%;
+}
+
+section{
+    position: relative;
+    padding: 0 20px;
+
+}
+.section-center h2{
+    text-transform: capitalize;
+}
+
+.section-top{
+    min-height: 300px;
+}
+.section-top h1{
+    font-size: 40px;
+    line-height: 1.3;
+}
+.section-top .content{
+    position:absolute;
+    top: 100px;
+    right: 200px;
+    /* width: 50%; */
+}
+.img1{
+    margin-top: 40px;
+    margin-left: 160px;
+    height: 281px;
+}
+
+
+/* section center */
+
+.section-center{
+    min-height: 600px;
+    background: #2d2254;
+
+}
+.section-center h2{
+    font-size: 20px;
+}
+
+.section-center .play{
+    width: 28%;
+    position: absolute;
+    top: 100px;
+    left: 80px;
+}
+
+.section-center .content{
+    position: absolute;
+    width: 50%;
+    top: 130px;
+    right: 70px;
+}
+
+.section-center .content >div{
+    background: rgba(255, 255, 255, 0.1);
+    padding:18px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+
+/* section grid */
+
+.section-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    text-align: center;
+}
+.section-grid >div{
+    background: rgba(255, 255, 255, 0.1);
+    padding:18px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.section-grid p{
+    color: #c5bbec;
+}
+.section-grid .dot{
+    font-size: 25px;
+    padding-left: 3px;
+}
+.section-grid h2{
+    margin-top: 3px;
+}
+
+footer{
+    margin-top: 0;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+.footer{
+    /* background: rgba(255, 255, 255, 0.1); */
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+
+footer >div{
+    /* background: rgba(255, 255, 255, 0.1); */
+    padding:10px 18px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+footer ul{
+    padding-left: 0;
+}
+footer ul li{
+    list-style: none;
+    border-bottom: 1px solid skyblue;
+    padding-bottom: 5px;
+    margin: 10px 0;
+
+}
+footer ul li a i{
+    color: #f5c42f;
+    margin-right: 10px;
+    cursor: pointer;
+}
+footer ul li a{
+    cursor: pointer;
+    transition: all ease-in .7s;
+}
+footer ul li a:hover{
+    color:skyblue;
+    transition: .3s;
+
+}
+hr{
+    border:2px solid #f5c42f;
+    border-radius: 2px;
+}
+.social-media i{
+    background: #f5c42f;
+    padding: 10px;
+    border: 2px solid #f5c42f;
+    border-radius: 50% 50%;
+}
+.mid1{
+    margin: 0 20px;
+}
+.mid{
+    margin-right: 20px;
+}
+.center{
+    /* text-align: center; */
+}
+.copyright p{
+    margin: 0;
+    background: rgba(255, 255, 255, 0.1);
+}
+/* Mobile nav */
+.mobile-nav{
+    /* background: rgba(255, 255, 255, 0.1);
+     */
+    background-color: #2d2254;
+    opacity: 0.9;
+    width: 50%;
+    height: 100vh;
+    display: none;
+
+}
+.fa-bars{
+    display: none;
+}
+.fa-times-circle{
+    display: none;
+}
+.mobile-nav ul{
+    padding-top: 33px;
+    margin-left: 0;
+    padding-left: 10px;
+}
+.mobile-nav ul li{
+    list-style: none;
+    margin-bottom: 18px;
+    /*  */
+    padding-left: 2px;
+    /* transition: all .3s ease-in; */
+    
+
+}
+.mobile-nav ul li:hover {
+    border-left: 3px solid aqua;
+    
+}
+.mobile-nav ul li:hover  a{
+    color: aqua;
+    transition: all 0.4s ease;
+}
+
+.mobile-nav ul li a{
+    text-decoration: none;
+    padding: 2px;
+}
+
+
+
+
+
+
+
+/* Mobile */
+/* As we used position absolute in system view make it static in mobie view */
+@media only screen and (max-width:700px){
+    body{
+        overflow-x: hidden;
+    }
+    /* upto 700px */
+    .section-top .content,
+    .section-center .play,
+    .section-center .content{
+        position: static;
+        width: 100%;
+    }
+    .img1{
+        display: block;
+        margin: 20px auto;
+        width: 90%;
+    }
+    .section-top{
+        line-height: 1.5;
+    }
+    .section-top .content{
+        text-align: center;
+        margin-bottom: 25px;
+
+    }
+    .section-center .play{
+        /* for using auto for images first make it display:block and use margin auto  */
+        /* because image is a inline block level element */
+        display: block;
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .section-grid{
+        /* display: flex;
+        flex-direction: column; */
+        display: block;
+        margin-top: 0;
+        
+        
+    }
+    .section-grid .second{
+        margin: 200px 0;
+    }
+    .footer{
+        margin-top: 0;
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        
+    }
+
+    nav ul{
+        display: none;
+
+    }
+    .fa-bars{
+        position: absolute;
+        top: 26px;
+        right: 20px;
+        display: block;
+        cursor: pointer;
+
+    }
+    .fa-times-circle{
+        position: absolute;
+        top: 26px;
+        right: 20px;
+        display: none;
+        cursor: pointer;
+    }
+    .mobile-nav {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        transition: all 0.4s ease-in-out;
+    }
+
+    .open{
+        transform: translateX(0%);
+        /* display: none; */
+    }
+    .cross{
+        display: none;
+    }
+    .close{
+        display: block;
+    }
+   
+
+
+}
+

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cc157bdf36.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="img/icons/favicon.ico"/>
+    <title>Login</title>
+    <style>
+        .square{
+            width: 70%;
+            height: 80vh;
+            /* border: 1px solid black; */
+            background-color:#ffff;
+            margin: 50px auto;
+            border-radius: 20px;
+            position: relative;
+        }
+        .imglogin{
+            display: block;
+            margin: 80px auto;
+           
+        }
+        .forms{
+            margin: 125px auto;
+           
+
+        }
+       
+        form .form-control{
+            width: 100% !important;
+            /* border-radius: 20px; */
+            margin:10px  auto;
+            
+
+
+        }
+        .input100 {
+            font-family: Poppins-Medium;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #666666;
+
+            display: block;
+            /* width: 100%; */
+            background: #e6e6e6;
+            height: 50px;
+            border-radius: 25px;
+            padding: 0 30px 0 68px;
+        }
+
+
+        /*------------------------------------------------------------------
+        [ Focus ]*/
+        .focus-input100 {
+            display: block;
+            position: absolute;
+            border-radius: 25px;
+            /* top: 0; */
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0px 0px 0px 0px;
+            color: rgba(87,184,70, 0.8);
+            /* margin:10px auto; */
+        }
+
+        
+
+        @-webkit-keyframes anim-shadow {
+            to {
+                box-shadow: 0px 0px 70px 25px;
+                opacity: 0;
+            }
+        }
+
+        @keyframes anim-shadow {
+            to {
+                box-shadow: 0px 0px 70px 25px;
+                opacity: 0;
+            }
+        }
+        .input100:focus + .focus-input100 {
+            -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+            animation: anim-shadow 0.5s ease-in-out forwards;
+        }
+        
+        .wrap-input100 {
+            position: relative;
+            width: 100%;
+            z-index: 1;
+            margin-bottom: 10px;
+        }
+        form small{
+            padding: 0 20px;
+        }
+        form label{
+            padding: 0px 20px;
+        }
+      
+        form button{
+            display: block !important;
+            margin: 20px auto ;
+            
+        }
+        .symbol-input100{
+            font-size: 15px;
+
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            border-radius: 25px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* padding-top: 5px; */
+            padding-left: 40px;
+            pointer-events: none;
+            color: #666666;
+
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            transition: all 0.4s;
+        }
+        .input100:focus + .focus-input100 + .symbol-input100{
+            color: #57b846;
+            padding-left: 35px;
+        }
+        .login100-form-title {
+            font-family: Poppins-Bold;
+            font-size: 24px;
+            color: #333333;
+            line-height: 1.2;
+            text-align: center;
+
+            width: 100%;
+            display: block;
+            padding-bottom: 20px;
+        }
+      
+        .three{
+            background: #7F7FD5;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .login{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: -1;
+        }
+        
+        .sign{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: -2;
+        }
+        .back{
+            background: #F6E017;
+            
+            
+        }
+       
+        .imgstart{
+            transform: translate(100%);
+            transition: all .7s ease-in-out;
+            z-index: 1;
+        }
+        .sign1{
+            transform: translate(-100%);
+            z-index: 0;
+            transition: all .7s ease-in-out;
+
+        }
+        .login1{
+            transform: translate(-100%);
+            z-index: 0;
+            transition: all .7s ease-in-out;
+
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="square row">
+            <div class="col-md-6 bg-info border  hello1" style="border-radius: 20px; ">
+                <img class="imglogin" src="img/login.png" alt="">
+            </div>
+            <div class="col-md-6 border three" style="border-radius: 20px;">
+                <div class="buttons d-flex flex-column justify-content-center align-items-center " style="margin-top: 135px;">
+                    <a href="#" class="btn btn-lg btn-outline-dark font-weight-bold mt-5">SIGN UP</a>
+                    <a href="#" class="btn btn-lg btn-outline-dark font-weight-bold mt-3">LOGIN</a>
+                </div>
+                
+
+            </div>
+            <div class="col-md-6 back  login" style="border-radius: 20px; height: 100%;">
+                <form class="forms">
+                    <span class="login100-form-title">
+						<strong>Login</strong> 
+					</span>
+                    <div class="form-group wrap-input100">
+                      <!-- <label for="exampleInputEmail1">Email address</label> -->
+                      
+                      <input type="email" class="form-control input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                      <span class="focus-input100"></span>
+                      <span class="symbol-input100">
+                
+                        <i class="fas fa-envelope-square" aria-hidden="true"></i>
+                      </span>
+                      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <div class="form-group wrap-input100">
+                      <!-- <label for="exampleInputPassword1">Password</label> -->
+                      <input type="password" class="form-control input100" id="exampleInputPassword1" placeholder="Password">
+                      <span class="focus-input100"></span>
+                      <span class="symbol-input100">
+                
+                        <i class="fas fa-lock" aria-hidden="true"></i>
+                      </span>
+
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success">Submit</button>
+                  </form>
+            </div>
+            
+            <div class="col-md-6 back  sign " style="border-radius: 20px; height: 100%;">
+                <form class="forms">
+                    <span class="login100-form-title">
+						<strong>Sign Up</strong> 
+					</span>
+                    <div class="form-group wrap-input100">
+                      <!-- <label for="exampleInputEmail1">Email address</label> -->
+                      
+                      <input type="email" class="form-control input100" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                      <span class="focus-input100"></span>
+                      <span class="symbol-input100">
+                
+                        <i class="fas fa-envelope-square" aria-hidden="true"></i>
+                      </span>
+                      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <div class="form-group wrap-input100">
+                      <!-- <label for="exampleInputPassword1">Password</label> -->
+                      <input type="password" class="form-control input100" id="exampleInputPassword1" placeholder="Password">
+                      <span class="focus-input100"></span>
+                      <span class="symbol-input100">
+                
+                        <i class="fas fa-lock" aria-hidden="true"></i>
+                      </span>
+
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success">Submit</button>
+                  </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script>
+        var signup=document.querySelectorAll("a")[0]
+        var login=document.querySelectorAll("a")[1]
+        // console.log(one)
+        signup.addEventListener("click",function(){
+            var hello1=document.querySelector(".hello1")
+            var sign=document.querySelector(".sign")
+            hello1.classList.toggle('imgstart')
+            sign.classList.add("sign1")
+        })
+
+        login.addEventListener("click",function(){
+            var hello1=document.querySelector(".hello1")
+            var login=document.querySelector(".login")
+            hello1.classList.toggle('imgstart')
+            login.classList.add("login1")
+        })
+
+    </script>
+</body>
+</html>
